@@ -291,7 +291,7 @@ _.prototype = {
 		if (this.autoplay) {
 			this.timer = setTimeout(function () {
 				me.next();
-			}, 1000);
+			}, 1);
 		}
 	}
 };
