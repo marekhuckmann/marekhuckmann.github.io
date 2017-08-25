@@ -1,12 +1,10 @@
-var circles = document.querySelectorAll(".circle");
+$('#fullpage').fullpage({
+  anchors: ['main', 'about', 'projects', 'contact'],
+  sectionsColor: ['white']
+});
 
-letsGo();
+var x = document.getElementById("display").offsetHeight;
+x*=2;
 
-function letsGo() {
-	for(var i=0; i<circles.length; i++) {
-		circles[i].addEventListener("click", function() {
-			var clickedColor = this.style.background;
-				this.style.color = "white";
-		});
-	}
-}
+var marginSetter = document.querySelector("#container");
+marginSetter.style.margin =  x + "px auto";
