@@ -1,56 +1,82 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Marek Hückmann</title>
-	<link rel="stylesheet" type="text/css" href="portfolio.css"></style>
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+  <title>Marek Hückmann</title>
+  <link rel="stylesheet" type="text/css" href="portfolio.css">
+  <link rel="stylesheet" type="text/css" href="jquery.fullPage.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript" src="jquery.fullPage.js"></script>
+  
 </head>
 <body>
-	<h1><span id="display">Marek Hückmann</span><br>Front-End Developer</h1>
-	<div id="container">
-		<a href="#">
-			<div class="circle projects">
-				<div class=linkText>
-					Projects
-				</div>
-			</div>
-		</a>
-		<a href="#">
-			<div class="circle about">
-				<div class=linkText>
-					About
-				</div>
-			</div>
-		</a>
-		<a href="#">
-			<div class="circle contact">
-				<div class=linkText>
-					Contact
-				</div>
-			</div>
-		</a>
-		<a href="https://www.linkedin.com/in/marek-h%C3%BCckmann-b23126100/" target="_blank">
-			<div class="circle ln">
-				<div class=linkText>
-					LinkedIn
-				</div>
-			</div>
-		</a>
-		<a href="https://www.facebook.com/marek.hueckmann" target="_blank">
-			<div class="circle fb">
-				<div class=linkText>
-					Facebook
-				</div>
-			</div>
-		</a>
-		<a href="https://github.com/marekhuckmann" target="_blank">
-			<div class="circle gh">
-				<div class=linkText>
-					GitHub
-				</div>
-			</div>
-		</a>
-	</div>
+<div id="callbacks-placeholder"></div>
+
+<div id="fullpage">
+  <div class="section" id="section1"><div class="moveOut">
+    <h1><span id="display">Marek Hückmann</span><br>Front-End Developer</h1>   
+    <div id="container">
+    <a href="#about">
+      <div class="circle projects">
+        <div class=linkText>
+          About
+        </div>
+      </div>
+    </a>
+    <a href="#projects">
+      <div class="circle about">
+        <div class=linkText>
+          Projects
+        </div>
+      </div>
+    </a>
+    <a href="#contact">
+      <div class="circle contact">
+        <div class=linkText>
+          Contact
+        </div>
+      </div>
+    </a>
+    <a href="https://www.linkedin.com/in/marek-h%C3%BCckmann-b23126100/" target="_blank">
+      <div class="circle ln">
+        <div class=linkText>
+          LinkedIn
+        </div>
+      </div>
+    </a>
+    <a href="https://www.facebook.com/marek.hueckmann" target="_blank">
+      <div class="circle fb">
+        <div class=linkText>
+          Facebook
+        </div>
+      </div>
+    </a>
+    <a href="https://github.com/marekhuckmann" target="_blank">
+      <div class="circle gh">
+        <div class=linkText>
+          GitHub
+        </div>
+      </div>
+    </a>
+  </div>
+  </div>
+  </div>
+
+  <div class="section"><center>Hello, World!</center></div>
+
+    <div class="section" id="section3">
+       <div class="slide" data-anchor="slide1">
+         <div class="moveOut"><center>Lorem<center></div>
+       </div>
+        <div class="slide" data-anchor="slide2">
+       <div class="moveOut"><center>ipsum<center></div></div>
+    </div>
+     <div class="section"><center>Sup.</center></div>
+    <div class="section fp-auto-height" id="section4"> 
+      <div id="footer"><center>Footer?</center></div>
+  </div>
+</div>
 <script type="text/javascript" src="portfolio.js"></script>
+
 </body>
 </html>
