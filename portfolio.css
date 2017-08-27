@@ -37,19 +37,42 @@ h1 {
 	margin: 0;
 	text-transform: uppercase;
 	padding: 20px 0;
+	position: fixed;
+	transition: background 1s;
+	-webkit-transition: background 1s;
+	-moz-transition: background 1s;
+}
+
+.description {
+	font-size: 3em;
+	color: white;
+	background: black;
+	font-weight: 300;
+	margin: 0 20px;
+	padding: 20px;
 	transition: background 1s;
 	-webkit-transition: background 1s;
 	-moz-transition: background 1s;
 }
 
 #display {
-	font-size: 200%;
+	font-size: 2em;
 	margin: 0 20px;
+}
+
+#junior {
+	letter-spacing: 0.1em;
 }
 
 #container {
 	max-width: 700px;
 	margin: 20px auto;
+	overflow: auto;
+}
+
+#gmail {
+	font-size: 2.75em;
+	letter-spacing: 0.25em;
 }
 
 .circle:hover {
