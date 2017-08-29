@@ -1,8 +1,6 @@
 var c = 0;
 var colors = [];
 var style = [];
-var style2;
-var style3;
 
 function randomColor() {
 	var r = Math.floor(Math.random() * 256);
@@ -131,18 +129,21 @@ function cloneArray(array) {
 			y = w.innerHeight|| e.clientHeight|| g.clientHeight;
 
 			if(x>y) {
-
 				var o = (y-(y*0.2))/25;
-
 			}
-			else
+			else {
 				var o = x/25;
+				var marginSetter = document.createElement('style');
+				marginSetter.type = 'text/css';
+				marginSetter.innerHTML = '#grid {margin-left: 1em; margin-right: 1em}';
+				document.getElementsByTagName('head')[0].appendChild(marginSetter);
+			}
 
-			style2 = document.createElement('style');
-			style2.type = 'text/css';
-			style2.innerHTML = '#grid td { height: ' + o + 'px; width: ' + o + 'px';
+			var gridSetter = document.createElement('style');
+			gridSetter.type = 'text/css';
+			gridSetter.innerHTML = '#grid td { height: ' + o + 'px; width: ' + o + 'px';
 			'#grid [color=c' + c + '] {	background-color: '+ colors[c] +';}';
-			document.getElementsByTagName('head')[0].appendChild(style2);
+			document.getElementsByTagName('head')[0].appendChild(gridSetter);
 
 			var fragment = document.createDocumentFragment();
 			this.grid.innerHTML = '';
@@ -255,10 +256,11 @@ var lifeView = new LifeView(document.getElementById('grid'), 25);
 
 	var tmp = document.getElementsByClassName("button");
 	var widthSetter = tmp["0"].offsetWidth;
-	style3 = document.createElement('style');
-	style3.type = 'text/css';
-	style3.innerHTML = 'button {width: '+widthSetter+'px;}'
-	document.getElementsByTagName('head')[0].appendChild(style3);
+	
+	var buttonSetter = document.createElement('style');
+	buttonSetter.type = 'text/css';
+	buttonSetter.innerHTML = 'button {width: '+widthSetter+'px;}'
+	document.getElementsByTagName('head')[0].appendChild(buttonSetter);
 
 	buttons.next.addEventListener('click', function() {
 		lifeView.next();
