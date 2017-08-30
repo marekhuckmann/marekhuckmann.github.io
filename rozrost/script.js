@@ -1,6 +1,45 @@
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
 var c = 0;
 var colors = [];
 var style = [];
+var sizeSetter = 25;
+
+function myFunction() {
+	sizeSetter = document.getElementById("setter").value;
+
+	if (isNaN(sizeSetter) || sizeSetter < 1 || sizeSetter > 200) {
+		alert("Wpisz liczbę z przedziału 1-200");
+		document.getElementById("demo").innerHTML = text;
+	}
+	else {
+		lifeView = new LifeView(document.getElementById('grid'), sizeSetter);
+	}
+}
 
 function randomColor() {
 	var r = Math.floor(Math.random() * 256);
@@ -14,7 +53,6 @@ function $(selector, container) {
 }
 
 (function() {
-
 	var _ = self.Life = function(seed) {
 		this.seed = seed;
 		this.height = seed.length;
@@ -129,10 +167,10 @@ function cloneArray(array) {
 			y = w.innerHeight|| e.clientHeight|| g.clientHeight;
 
 			if(x>y) {
-				var o = (y-(y*0.2))/25;
+				var o = (y-(y*0.2))/sizeSetter;
 			}
 			else {
-				var o = x/25;
+				var o = x/sizeSetter;
 				var marginSetter = document.createElement('style');
 				marginSetter.type = 'text/css';
 				marginSetter.innerHTML = '#grid {margin-left: 1em; margin-right: 1em}';
@@ -246,7 +284,7 @@ function cloneArray(array) {
 
 })();
 
-var lifeView = new LifeView(document.getElementById('grid'), 25);
+var lifeView = new LifeView(document.getElementById('grid'), sizeSetter);
 
 (function() {
 
@@ -256,7 +294,7 @@ var lifeView = new LifeView(document.getElementById('grid'), 25);
 
 	var tmp = document.getElementsByClassName("button");
 	var widthSetter = tmp["0"].offsetWidth;
-	
+
 	var buttonSetter = document.createElement('style');
 	buttonSetter.type = 'text/css';
 	buttonSetter.innerHTML = 'button {width: '+widthSetter+'px;}'

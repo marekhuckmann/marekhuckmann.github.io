@@ -12,28 +12,22 @@ h1 {
 	margin: .5em 0 1em;
 }
 
+ol {
+	text-align: left;
+}
+
+li {
+	margin:0 0 .5em 0;   
+}
+
 #grid {
 	margin: 1em auto 0;
 	border-spacing: 0;
 	border-collapse: collapse;
-
 }
 
-#grid [alive=true] {
-	background-color: red	
-}
-
-
-@-webkit-keyframes birth {
-	50% {
-		box-shadow: 0 0 0 99px green inset;
-	}
-}
-
-@keyframes birth {
-	50% {
-		box-shadow: 0 0 0 99px green inset;
-	}
+#myText {
+	text-align: center;
 }
 
 #grid td {
@@ -74,4 +68,86 @@ button:disabled {
 #autoplay {
 	position: absolute;
 	clip: rect(0,0,0,0);
+}
+
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+	position: relative;
+	background-color: white;
+	margin: auto;
+	padding: 0;
+	border: 1px solid #888;
+	width: 80%;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	-webkit-animation-name: animatetop;
+	-webkit-animation-duration: 0.4s;
+	animation-name: animatetop;
+	animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+	from {top:-300px; opacity:0} 
+	to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+	from {top:-300px; opacity:0}
+	to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+	color: white;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+	transform: translate(50%, -15%);
+}
+
+.close:hover,
+.close:focus {
+	color: #696969;
+	text-decoration: none;
+	cursor: pointer;	
+}
+
+.modal-header {
+	padding: 2px 16px;
+	background-color: black;
+	color: white;
+}
+
+.modal-body {
+	padding: 2px 16px;
+}
+
+.info {
+	width: 80%;
+	margin: 0 auto;
+	position: relative;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+	letter-spacing: 0.1em;
+}
+
+a:hover {
+	color: #696969;
 }

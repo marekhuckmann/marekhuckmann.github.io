@@ -3,15 +3,42 @@
 <head>
 	<title>Rozrost ziaren</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
 </head>
 <body>
 	<table id='grid'></table>
 
-	<button class="next">Next</button>
+	<button class="next">Dalej</button>
 	<input type="checkbox" id="autoplay" />
-	<label for="autoplay" class="button">Autoplay</label>
+	<label for="autoplay" class="button">Automatycznie</label>
+	<button class="next" id="myBtn">Info</button>
+	<button onclick="myFunction()">Ustaw</button><br>
+	<input type="text" id="setter" value="25">
+
+	<div id="myModal" class="modal">
+		<div class="modal-content">
+			<div class="modal-header">
+				<span class="close">&times;</span>
+				<h2>Symulacja rozrostu ziaren</h2>
+			</div>
+			<div class="modal-body">
+				<div class="info">
+					<br>
+					<ol>
+						<li>Stwórz ziarna klikając w różne miejsca siatki</li>
+						<li>Klikając "Dalej" zobaczysz następną fazę rozrostu</li>
+						<li>Aby zobaczyć wszystkie możliwe fazy, kliknij "Automatycznie"</li>
+						<li>Możesz też ustawić własny rozmiar planszy, wpisując go w pole i klikając "Ustaw"</li>
+					</ol>
+
+					<p><br>&copy; 2017 <a href="http://huckmann.com">Marek Hückmann</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<script type="text/javascript" src="script.js"></script>
+
 </body>
 </html>
