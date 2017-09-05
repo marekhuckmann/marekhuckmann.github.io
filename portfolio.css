@@ -64,7 +64,7 @@ h1 {
 	letter-spacing: 0.1em;
 }
 
-#container {
+.container {
 	max-width: 700px;
 	margin: 20px auto;
 	overflow: auto;
@@ -121,4 +121,8 @@ a {
 
 a:hover {
 	color: white;
+}
+
+.prjkt {
+	text-align: center;
 }
