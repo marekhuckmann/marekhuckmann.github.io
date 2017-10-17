@@ -19,7 +19,7 @@ body {
     background: black;
     margin: 1.66%;
     float: left;
-    color: black;
+    color: white;
     transition: background 1s, color 1s;
     -webkit-transition: background 1s, color 1s;
     -moz-transition: background 1s, color 1s;
@@ -79,7 +79,6 @@ h1 {
 .circle:hover {
     background-color: black;
     cursor: pointer;
-    color: white;
 }
 
 .gh:hover {
