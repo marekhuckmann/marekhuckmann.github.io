@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Zadanie na Systemy Ekspertowe</title>
+</head>
+
+<body>
+    <p id="x"></p>
+    <button onclick="getX()">Insert x</button>
+    <button onclick="getY()">Insert y</button>
+    <script>
+    var x = { name: "", electronic: false, classic: false, mood: "", after99: false }
+    var y = { name: "", electronic: false, classic: false, mood: "", after99: false }
+
+    function getX() {
+        x.name = prompt("Insert name:");
+        // document.getElementById("x").innerHTML += "Siemka, " + x.name + "!";
+
+        var par = document.createElement("p");
+        par.innerHTML += "Witam, " + x.name;
+        document.body.appendChild(par);
+        buttonCreator("Electronic", par);
+    }
+
+    function getY() {
+        y.name = prompt("Insert name:");
+        document.getElementById("x").innerHTML += "<br>Siemka, " + y.name + "!";
+
+    }
+
+    function buttonCreator(name, par) {
+        var btn = document.createElement("button");
+        btn.style = "display: block; margin-top: 20px;";
+        var t = document.createTextNode(name);
+        btn.appendChild(t);
+        btn.onclick = function() { getAttr(name, par) };
+        document.body.appendChild(btn);
+    }
+
+    function getAttr(attr, par) {
+        x.attr = prompt("Insert name:");
+        par.innerHTML += "Gatunek to: " + attr + "!";
+    }
+    </script>
+</body>
+
+</html>
